@@ -34,6 +34,39 @@ int optCost(int freq[],int i ,int j)
     }
 
   }
-// RETURN minimum value 
+// RETURN minimum value
   return min + fsum;
+
+}
+
+// the main function which calculate minimum cost of
+// a binary search tree .It mainly uses optCost() to
+// find the optimal cost
+
+ int optimalSearchTree(int keys[],int freq[],int n)
+ {
+  // here array   Keys[] is assumed to be sorted in
+  // increasing order .if KEYS[] is not sorted ,then
+  // add code to sort Keys, and rearrange freq[] accordingly
+  return optCost(freq,0,n-1);
+ }
+ // a utility function to get a sum of array elements
+ // freq[i] to freq[j]
+int sum (int freq[],int i,int j )
+{
+  int s=0;
+  for (int k=i;k<=j;k++)
+  s+=freq[k];
+  return s;
+
+}
+
+//DRIVER PROGRAM TO TEST ABOVE FUNCTON
+int main()
+{
+  int Keys[]={10,12,20};
+  int freq[]={38,8,50};
+  int n = sizeof(Keys)/sizeof(Keys[0]);
+  cout<<"COST OF OPTIMAL BST IS :"<<optimalSearchTree(Keys,freq,n);
+  return 0;
 }
