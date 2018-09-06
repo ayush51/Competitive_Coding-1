@@ -26,7 +26,7 @@ using namespace std;
  void printarray(int arr[],int size){
    int i;
    for (i=0;i<size;i++){
-         cout<< arr[i];
+         cout<< arr[i]<< " ";
    }
    cout << endl;
  }
@@ -34,8 +34,8 @@ using namespace std;
  int main(){
     int arr[] = {64, 34, 25, 12, 22, 11, 90};
     int n = sizeof(arr)/sizeof(arr[0]);
-    bubbleSort(arr, n);
+    bubblesort(arr, n);
     cout<<"SORTED array"<<endl;
-    printArray(arr, n);
+    printarray(arr, n);
     return 0;
 }
