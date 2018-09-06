@@ -20,7 +20,7 @@ int optCost(int freq[],int i ,int j)
 
 
   // GET SUM OF freq[i],freq[i+1],......,freq[j]
-  int fsum=sum= sum(freq,i,j);
+  int fsum=sum(freq,i,j);
 
   // INITIALIZE MINIMUM VALUES
   int min= INT_MAX;
