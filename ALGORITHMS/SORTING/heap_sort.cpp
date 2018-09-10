@@ -1,7 +1,7 @@
 #include <iostream >
 using namespace std;
 
-// to heapify a subtree rooted with node i which is an index in arr[], n is the size of heap
+// to heapify or to make a max heap  a subtree rooted with node i which is an index in arr[], n is the size of heap
 void heapify(int arr[],int n,int i ){
   int largest = i;// initialize largest as the root
   int left= 2*i+1;// left index
@@ -23,6 +23,13 @@ void heapify(int arr[],int n,int i ){
   heapify(arr,n,largest);
   }
 }
+void swap(int *xp,int *yp){
+  int temp=*xp;
+  *xp=*yp;
+  *yp=temp;
+
+
+}
 
 void print_array(int  arr[],int n){
   int i ;
@@ -32,3 +39,21 @@ void print_array(int  arr[],int n){
   cout << endl ;
 
 }
+
+// main function to do the heap sort
+void heap_sort(int arr[],int n){
+
+  // build heap (rearrange array )
+  for (int i=n/2 -1 ; i>=0;i--){
+    heapify(arr,n,i);
+  }
+    // one by one extract an element from heap
+  for (int i=n-1;i>=0;i--){
+// move current root to an end
+swap(arr[0],arr[i]);
+// call max heapify on reduced heap
+heapify(arr,i,0);  }
+
+}
+
+// now we will try to implemen 
