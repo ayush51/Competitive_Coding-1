@@ -56,4 +56,15 @@ heapify(arr,i,0);  }
 
 }
 
-// now we will try to implemen 
+// now we will try to implement the code
+int main () {
+  int arr[]={1,2,99,32,100 ,13,44,56,5 ,11,10,4,15,};
+int n=sizeof(arr)/sizeof(arr[0]);
+cout<<"array before sorting : " ;
+print_array(arr,n);
+// doing heap_sort
+heap_sort(arr,n);
+  cout<<"array after heap sort :";
+  print_array(arr,n);
+  return 0;
+}
