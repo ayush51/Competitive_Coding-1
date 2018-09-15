@@ -1,3 +1,5 @@
+
+
 #include<iostream>
 using namespace std;
 
@@ -8,9 +10,10 @@ void swap(int *xp,int *yp){
 
 }
 
-void print(int arr,n){
-  for (int i=0;i<n;i++){
-    cout<<arr[i]<<" ";
+void print(int arr[],int n){
+    int i;
+  for ( i=0;i<n;++i){
+    cout << arr[i]<<" ";
   }
   cout<<endl;
 }
@@ -23,7 +26,7 @@ void print(int arr,n){
 int partition(int arr[],int low ,int high){
   int pivot=arr[high];
   int i=low-1;
-  for (int j=low;j<high-1;j++){
+  for (int j=low;j<=high-1;j++){
     if (arr[j]<=pivot){
       i++;
       swap(arr[i],arr[j]);
@@ -48,7 +51,7 @@ void quick_sort(int arr[],int low,int high){
 }
 // main function to see whether our code is woking properly or not
 int main(){
-  int arr[]={22,1,3,45,12,13,67,78,99,100};
+  int arr[]={22,1,3,45,12,13,67,99,78,100};
   int n=sizeof(arr)/sizeof(arr[0]);
   cout<<"ARRAY BEFORE SORTING : ";
 print(arr,n);
