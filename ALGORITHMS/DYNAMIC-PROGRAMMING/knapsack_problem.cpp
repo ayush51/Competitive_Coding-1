@@ -26,5 +26,11 @@ int Knapsack(int W,int wt[],int val[],int n ){
 
 // program to implement the knapsack problem
 int main(){
+  int val[]={60,100,120};
+  int wt[]={10,20,30};
+  int W=50;
+  int n sizeof(val)/sizeof(val[0]);
+  cout<<Knapsack(W,wt,val,n);
+  
   return 0;
 }
