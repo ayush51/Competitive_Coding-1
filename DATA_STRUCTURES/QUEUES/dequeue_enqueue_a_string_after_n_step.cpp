@@ -42,8 +42,9 @@ int main(){
   char ch;
   for (int i=0;i<N;++i){
     ch=Front(que,frnt );
-    enqueue(que,ch,rear,arraysize);
     dequeue(que,frnt,rear);
+    enqueue(que,ch,rear,arraysize);
+
 
   }
   for (int i=frnt;i<rear;++i){
