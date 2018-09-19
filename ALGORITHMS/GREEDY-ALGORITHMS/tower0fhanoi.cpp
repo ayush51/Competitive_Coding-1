@@ -8,9 +8,9 @@ cout<<endl;
 return ;
 }
 
-towerofhanoi(int n-1,from_rod,aux_rod,to_rod);
+towerofhanoi( n-1,from_rod,aux_rod,to_rod);
 cout<<"move disk "<<n<<"from rod "<<from_rod<<"to "<<to_rod;
-towerofhanoi(int n-1,aux_rod,to_rod,from_rod);
+towerofhanoi( n-1,aux_rod,to_rod,from_rod);
 
 }
 
@@ -19,9 +19,5 @@ int main(){
   cin>>n;
   towerofhanoi(n,'A','C','B');// A,B AND C ARE NAMES OF THE RODS
   return 0;
-
-}
-
-
 
 }
