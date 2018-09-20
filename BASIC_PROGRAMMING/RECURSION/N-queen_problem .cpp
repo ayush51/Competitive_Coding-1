@@ -41,8 +41,31 @@ for (i=row,j=col;i<N && j>=0;i++,j--){
 return true;
    }
 
-   
+bool recurion_nqueen(int board[N][N],col){
+// if all queens are placed with proper
+// poistions
+  if (col>= N)   {
+    return true;
+  }
+
+// loop iterating on the rows for a specific column
+for (int i=0;i<N;i++){
+  // if the position is a valid poistion
+  if (isSafe(board,i,col)){
+ // place the queen here
+ board[i][col]=1;
+ // recursion to next column and
+ // starts the for loop from 0 row to next row till we get a safe poisition for our new queen
+     if(recursion_nqueen(board,col+1)){
+       return true;
+}
 
 
-
+// in the next column, if we don't get any row valid to poistion our queen
+// we simply backtrack  to the previous placed queen in previous column
+// and we make that value from 1 to zero 0
+board[i][ col]=0;
+  }
+}
+return false ;
 }
