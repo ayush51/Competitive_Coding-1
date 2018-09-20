@@ -1,7 +1,12 @@
 //c++ program to solve N-queen backtracking problem
 #include<iostream>
 using namespace std ;
+
+// N : SQUARE CHESS SIZE
+// WRITE HERE CHESS SIZE
+# define N 10
 // function to print solution
+
 void print_solution(int board[N][N]){
 for(int i=0;i<N;i++){
                 for (int j=0;j<N;j++){
@@ -28,6 +33,7 @@ bool isSafe(int board[N][N],int row ,int col){
         if (board[i][j]){
           return false;
         }
+   }
 
 // check lower diagonal on left side
 for (i=row,j=col;i<N && j>=0;i++,j--){
@@ -41,7 +47,7 @@ for (i=row,j=col;i<N && j>=0;i++,j--){
 return true;
    }
 
-bool recurion_nqueen(int board[N][N],col){
+bool recursion_nqueen(int board[N][N],int col){
 // if all queens are placed with proper
 // poistions
   if (col>= N)   {
@@ -68,4 +74,30 @@ board[i][ col]=0;
   }
 }
 return false ;
+}
+
+
+bool N_queen(int board[N][N]){
+
+    for (int i=0;i<N;i++){
+  for (int j=0;j<N;j++){
+    board[i][j]=0;
+  }
+}
+// making a N*N matrix
+// calling our recursion function
+// starting from col 0
+if (recursion_nqueen(board,0)== false){
+  cout<< "solution doesn't exist";
+return false;
+}
+
+print_solution(board);
+return true;
+}
+
+int main(){
+    int board[N][N];
+N_queen(board);
+  return 0;
 }
