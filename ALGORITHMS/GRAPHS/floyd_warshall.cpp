@@ -1,4 +1,4 @@
-let us code floyd warshall algo
+//let us code floyd warshall algo
 #include <iostream>
 using namespace std;
 
@@ -55,15 +55,14 @@ print_solution(dist);
 // defining the  body of print_solution function
 void print_solution(int dist[][V]){
 
-  cout<<"FOLLOWING IS THE SMALLEST DISTANCE POSSIBLE IN THE
-  CONNECTED EDGES ,EVERY CONNECTED VERTICES \n";
+  cout<<"FOLLOWING IS THE SMALLEST DISTANCE POSSIBLE IN THE CONNECTED EDGES ,EVERY CONNECTED VERTICES \n";
 
   for (int i=0;i<V;i++){
     for (int j=0;j<V;j++){
       if (dist[i][j]==INF)
       cout<< "INF"<<" ";
       else
-        cout<<dist[i][j];
+        cout<<dist[i][j]<<"   ";
     }
     cout<<endl;
   }
@@ -75,7 +74,7 @@ void print_solution(int dist[][V]){
 
 int main(){
 
-  '''Let us create the following weighted graph
+  /*Let us create the following weighted graph
             10
        (0)------->(3)
         |         /|\
@@ -83,12 +82,12 @@ int main(){
         |          | 1
        \|/         |
        (1)------->(2)
-            3           '''
+            3          */
   int graph[V][V] = { {0,   5,  INF, 10},
                       {INF, 0,   3, INF},
                       {INF, INF, 0,   1},
                       {INF, INF, INF, 0}
                     };
 
-flyod_warshall(graph);
+floyd_warshall(graph);
                     return 0;}
