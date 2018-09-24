@@ -1,10 +1,10 @@
 #include<iostream>
-#nclude<string>
+#include<string>
 using namespace std ;
 
-void search(char *pat, char *txt){
-int M =strlen(pat);
-int N =strlen(txt);
+void search(string pat,  string txt){
+int M =pat.length();
+int N =txt.length();
 
 //a loop will slide pat[] one by one
 for (int i=0;i<=N-M;i++){
@@ -21,22 +21,15 @@ int j;
 }
 
 }
-
-// main function in executing this function
-
 int main (){
   int N,M;
-  char pat[M],txt[N];
-
+  string  pat,txt;
   cout<<"enter any text u want\n";
-  for (int i=0;i<N;i++){
-    cin>> txt[N];
-  }
-
-  cout<<"enter patern to be searched \n";
-  for (int i=0;i<M;i++){
-    cin>> pat[M];
-  }
+  getline(cin,txt);
+  N=txt.length();
+  cout<<"enter pattern to be searched \n";
+  getline(cin,pat);
+   M=pat.length();
 
   search(pat,txt);
   return 0;
