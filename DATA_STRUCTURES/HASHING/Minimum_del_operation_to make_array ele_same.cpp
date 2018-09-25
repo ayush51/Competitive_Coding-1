@@ -1,5 +1,6 @@
 #include <iostream>
-#inlude<bits/stdc++.h>
+#include<unordered_map>
+#include<bits/stdc++.h>
 using namespace std;
 
 //function which calculate the minimum number of operation to make
@@ -11,7 +12,7 @@ int min_Delete (int arr[],int n ){
   // all array elements in it using elemen as key
   // and freq as value
 
-  unordered_ma<int,int> freq;
+  unordered_map<int,int> freq;
   for (int i=0;i<n;i++){
     freq[arr[i]]++;
   }
@@ -19,7 +20,7 @@ int min_Delete (int arr[],int n ){
 int max_freq=INT_MIN;
   //find max frequency among all the frequencies
 for (auto itr=freq.begin();itr !=freq .end();itr ++){
-  max_freq=max(max_freq,itr>-second );
+  max_freq=max(max_freq,itr->second );
 
 }
 
@@ -32,6 +33,6 @@ return n-max_freq;
 int main (){
   int arr[]={4,4,2,30,4,1,3,3,4,4};
   int n =sizeof(arr)/sizeof(arr[0]);
-  cout<<min_delete(arr,n);
+  cout<<min_Delete(arr,n);
   return 0;
 }
