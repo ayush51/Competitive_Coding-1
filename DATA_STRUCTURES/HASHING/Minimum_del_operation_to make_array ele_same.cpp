@@ -5,7 +5,7 @@ using namespace std;
 //function which calculate the minimum number of operation to make
 // all element same in the array
 
-int minDelete (int arr[],int n ){
+int min_Delete (int arr[],int n ){
 
   // create a hash map and store the frequencies of
   // all array elements in it using elemen as key
@@ -28,4 +28,10 @@ for (auto itr=freq.begin();itr !=freq .end();itr ++){
 return n-max_freq;
 }
 
-// main program to implement 
+// main program to implement above code
+int main (){
+  int arr[]={4,4,2,30,4,1,3,3,4,4};
+  int n =sizeof(arr)/sizeof(arr[0]);
+  cout<<min_delete(arr,n);
+  return 0;
+}
