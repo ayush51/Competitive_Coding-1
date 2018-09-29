@@ -4,14 +4,14 @@
 using namespace std;
 
 // link list node
-struct* Node {
+struct Node {
   int data;
 struct  Node* next;
 };
 
 /* give the refrence pointer to a pointer to head
 and push the new node at the front */
-void push (struct **head_ref , int new_data){
+void push (struct Node** head_ref , int new_data){
   // allocate node
 
   struct Node* new_node= (struct Node*)malloc(sizeof(struct Node));
