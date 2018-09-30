@@ -2,15 +2,26 @@
 using namespace std ;
 
 
+
+int step(int n){
+if(n==0){
+return 1;
+}
+int ans;
+
+if (n>=1){
+ans=step(n-1)+step(n-2)+step(n-3);
+}
+return ans;
+
+}
+
 int main(){
 
 int n;
 // no of.steps
 cin>>n;
-// so basically we have to find the number of solution offered tp the estairs probblem
-// in how many ways i can cross the n steps varying me own footsteps form 1..2..3..4,5,..i
-//where i can be a variable..
 
-
-  return 0;
+cout<<step(n);
+return 0;
 }
