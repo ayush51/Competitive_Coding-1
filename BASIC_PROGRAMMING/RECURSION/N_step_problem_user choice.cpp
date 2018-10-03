@@ -3,14 +3,15 @@ using namespace std ;
 
 
 
-int step(int n){
+int step(int n,int i ){
 if(n==0){
 return 1;
 }
 
 int ans=0;
-if (n>=1){
-ans=step(n-1)+step(n-2)+step(n-3);
+if (n>=1 && i>=1){
+  i--;
+ans=step(n-i);
 }
 return ans;
 
