@@ -17,9 +17,15 @@ int i,j;
      }
 
      if(X[i-1]==Y[j-1]){
-       L[i][j]=L[i-1][j-1]+1;
+       L[i][j]=L[i-1][j-1]+1;}
        // if previous diagonal element is equal then add 1 to next diagnoal element
+
+       else {
+         L[i][j]=L[i-1][j];}
+         // just copy the upper row value keeping the same column
+
      }
+    
    }
  }
 
