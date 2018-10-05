@@ -13,6 +13,12 @@ int i,j;
    {
      if (i==0 || j==0){
        L[i][j]=0;// making the first row and first column all elements equal to zero
+
+     }
+
+     if(X[i-1]==Y[j-1]){
+       L[i][j]=L[i-1][j-1]+1;
+       // if previous diagonal element is equal then add 1 to next diagnoal element
      }
    }
  }
