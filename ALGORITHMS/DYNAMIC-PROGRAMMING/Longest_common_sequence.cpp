@@ -21,13 +21,27 @@ int i,j;
        // if previous diagonal element is equal then add 1 to next diagnoal element
 
        else {
-         L[i][j]=L[i-1][j];}
+         L[i][j]=max(L[i-1][j],L[i][j-1]);}
          // just copy the upper row value keeping the same column
 
      }
-    
+
    }
+
+  return L[m][n];
+  // L[m][n] contains the longest common sequence of the X[0....n],Y[0....m]
+
  }
+// function to calculate the greater number between the 2 number
+ int max(int a, int b){
+   return (a>b) ? a:b ;
+ }
+
+ int main(){
+   return 0;
+ }
+
+
 
 
   }
