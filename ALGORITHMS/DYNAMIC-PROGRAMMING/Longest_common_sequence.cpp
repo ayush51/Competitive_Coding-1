@@ -2,11 +2,11 @@
 using namespace std;
 // it will find the length of common sequence
  int lcs(char *X,char *Y,int m, int n){
-int L[m+1][n+1];it will store our common length trick
+int L[m+1][n+1];//it will store our common length trick
 int i,j;
 
  //following steps build the L[m+1][n+1] in bottom up fashion
- // and it keep trsck of the longest common sequence
+ // and it keep track of the longest common sequence
 
  for(i=0;i<=m;i++){
    for (j=0;j<=n;j++)
@@ -16,7 +16,7 @@ int i,j;
 
      }
 
-     if(X[i-1]==Y[j-1]){
+     else if(X[i-1]==Y[j-1]){
        L[i][j]=L[i-1][j-1]+1;}
        // if previous diagonal element is equal then add 1 to next diagnoal element
 
@@ -38,10 +38,13 @@ int i,j;
  }
 
  int main(){
+   char X[]="uuuipp";
+   char Y[]="uuuippoopppp";
+
+   int m = strlen(X);
+   int n=strlen(Y);
+   cout<<"Length of common sequence between X and Y is "<<" ";
+   cout<< lcs(X,Y,m,n);
+
    return 0;
  }
-
-
-
-
-  }
