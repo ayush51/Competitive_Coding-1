@@ -14,7 +14,7 @@ for (int j=1;j<=n && j<=i; j++){
 ans+=step(n-j,i);
                               }
 }
-return an;
+return ans;
 }
 
 int main(){
