@@ -29,4 +29,20 @@ int mod(string t ,int T){
   return r;
 }
 
-// methods return 
+// methods return the smallest multiple which has
+//binary digit
+string min_multiple_binary_digit(int N){
+  queue <string> q;
+  set <int> visit;;
+  string t= '1';
+  // in starting pushb 1 into the queue
+  q.push(t);
+  // loop until queue is not empty
+  while(!q.empty()){
+    // take the first number from the queue
+    t=q.front(); q.pop();
+    
+  }
+
+
+}
