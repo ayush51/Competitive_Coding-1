@@ -16,3 +16,17 @@ N=N/10;
   }
   return true;
 }
+
+//method returns smallest multiple which has
+//binary digits
+int mod(string t ,int T){
+
+  int r=0;
+  for (int i=0; i<=t.length();i++){
+    r=r*10 +(t[i] - '0');
+    r%=10;
+  }
+  return r;
+}
+
+// methods return 
