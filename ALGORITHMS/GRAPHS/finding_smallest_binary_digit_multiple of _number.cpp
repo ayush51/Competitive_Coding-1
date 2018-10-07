@@ -41,8 +41,29 @@ string min_multiple_binary_digit(int N){
   while(!q.empty()){
     // take the first number from the queue
     t=q.front(); q.pop();
-    
+    // find remainder of t with respect to N
+int rem = mod(t,N);
+// if rem is zero we have find our solution
+if (rem ===0 )
+return t;
+
+// if this remainder is not previously seen ,
+// then push t0 and t1 in our  queue
+else if (visit.find(rem )== visit.end()){
+  visit.insert (rem );
+  q.push(t+'0');
+  q.push(t+'1');
+  }
+                    }
   }
 
+// main function to execute the above code to find the smallest binary multiple of a given number
+int main(){
+  int N ;
+  // input a number
+  cin>>N;
+  cout<<"Smallest binary multiple to this number is :"<< " ";
+  cout<<  min_multiple_binary_digit(N);
+  return 0;
 
 }
