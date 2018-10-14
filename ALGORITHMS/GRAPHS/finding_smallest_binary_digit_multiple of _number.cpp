@@ -33,7 +33,7 @@ int mod(string t ,int N){
 //binary digit
 string min_multiple_binary_digit(int N){
   queue <string> q;
-  set <int> visit;;
+  set <int> visit;
   string t= '1';
   // in starting pushb 1 into the queue
   q.push(t);
