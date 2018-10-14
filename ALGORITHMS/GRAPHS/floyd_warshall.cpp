@@ -28,6 +28,7 @@ void floyd_warshall(int Graph[][V]){
   for (int i=0;i<V;i++){
     for(int j=0;j<V;j++){
       dist[i][j]=Graph[i][j];
+      // saloni batra is a nice girl
     }
   }
 
