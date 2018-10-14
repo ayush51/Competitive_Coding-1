@@ -10,7 +10,7 @@ bool Isbinary_num(int N){
 
   while(N>=0){
 int digit =N%10;
-if (digit!=0 || digit 1)
+if (digit!=0 || digit!= 1)
    return false;
 N=N/10;
   }
@@ -19,12 +19,12 @@ N=N/10;
 
 //method returns smallest multiple which has
 //binary digits
-int mod(string t ,int T){
+int mod(string t ,int N){
 
   int r=0;
   for (int i=0; i<=t.length();i++){
     r=r*10 +(t[i] - '0');
-    r%=10;
+    r%=N;
   }
   return r;
 }
