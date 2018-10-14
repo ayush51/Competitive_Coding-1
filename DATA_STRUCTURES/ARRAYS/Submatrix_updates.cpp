@@ -37,7 +37,7 @@ void show(int N,int M ,int (&temp)[2000][2000]){
 
 void mech(int N,int M ,int (&temp)[2000][2000]){
     int r,c,s,d;
-    cin>>r>>c>>s>>d;
+    cin>>r>>c>>s>>d; //take it in a single variable
      int uk1=r+s-1;
     int uk2=c+s-1;
 
